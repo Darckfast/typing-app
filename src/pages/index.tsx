@@ -148,7 +148,7 @@ const Home: React.FC = () => {
 
           <a
             tabIndex={2}
-            href="https://github.com/Darckfast/nextjs-typescript-template"
+            href="https://github.com/Darckfast/typing-app"
           >
             <GithubIcon className="icon no-rotate"></GithubIcon>
           </a>
