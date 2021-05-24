@@ -1,4 +1,4 @@
-import { words as importedWords } from '../../public/words/english.json'
+import EnglishWords from '../../public/words/english.json'
 import { Configuration } from './Configuration'
 
 export interface WordsInterface {
@@ -10,7 +10,7 @@ export interface WordsInterface {
 
 export class Words {
   getWords(activate = true): WordsInterface[][] {
-    const wordsToType = this.shuffleWords(importedWords)
+    const wordsToType = this.shuffleWords(EnglishWords.words)
       .slice(0, Configuration.getInstance().get('wordsThreshold') as number)
       .map(word => word.toLowerCase().concat(' '))
       .map(word =>
