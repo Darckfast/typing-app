@@ -38,5 +38,7 @@ EXPOSE 3000
 # Uncomment the following line in case you want to disable telemetry.
 ENV NEXT_TELEMETRY_DISABLED 1
 
+HEALTHCHECK --interval=5m --timeout=3s \
+  CMD curl -f http://localhost:3000/api/healthcheck || exit 1
 
 CMD ["yarn", "start"]
